@@ -1,0 +1,27 @@
+docker build -t nombre .
+gcloud init
+gcloud auth configure-docker
+b1e
+docker tag ID_IMAGEN gcr.io/PROYECTO/NOMBRE_IMAGEN_EN_CLOUD
+docker push gcr.io/PROYECTO/NOMBRE_IMAGEN_EN_CLOUD
+Proyecto = ccs-demo-326917
+NOMBRE_IMAGEN_EN_CLOUD = php-1
+
+docker tag e9c3c4c538b6 gcr.io/ccs-demo-326917/prueba-zelva-gcp
+docker push gcr.io/ccs-demo-326917/prueba-zelva-gcp
+
+
+756e5
+docker tag d11c46fa78 gcr.io/labs-302917/grafana-porsalud
+docker push gcr.io/labs-302917/grafana-porsalud
+
+docker tag b1e8bb gcr.io/laboratorio-apps/prueba1
+docker push gcr.io/laboratorio-apps/prueba1
+
+
+RUN apt-get update && \
+apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
+docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+docker-php-ext-install gd
+
+RUN chmod -R 777 /var/www/
